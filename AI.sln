@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework_App_4_8", "Framew
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{7630D8C5-2BD1-4407-AF59-A648D388B518}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multi", "Multi\Multi.csproj", "{D43E5055-9FF0-47C5-B715-95D15DB1D212}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{9712A339-85BD-4C93-B62F-3F577212AF2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9712A339-85BD-4C93-B62F-3F577212AF2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9712A339-85BD-4C93-B62F-3F577212AF2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D43E5055-9FF0-47C5-B715-95D15DB1D212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D43E5055-9FF0-47C5-B715-95D15DB1D212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D43E5055-9FF0-47C5-B715-95D15DB1D212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D43E5055-9FF0-47C5-B715-95D15DB1D212}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
