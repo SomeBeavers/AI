@@ -1,6 +1,8 @@
-﻿namespace Multi;
-
-public class Multi1
+﻿namespace Multi
 {
-    
+
+    public class Multi1
+    {
+
+    }
 }

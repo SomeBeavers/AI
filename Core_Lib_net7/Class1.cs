@@ -9,6 +9,14 @@
         /// Gets the name of this <see cref="Class1"/> instance.
         /// </summary>
         public string Name { get; }
+        /// <summary>
+        /// Gets the name of this <see cref="Class1"/> instance.
+        /// </summary>
+        public string Name2 { get; }
+        /// <summary>
+        /// Gets the name of this <see cref="Class1"/> instance.
+        /// </summary>
+        public string Name3 { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Class1"/> struct.
