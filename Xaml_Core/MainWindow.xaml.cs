@@ -20,9 +20,15 @@ namespace Xaml_Core
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int _clickCount;
         public MainWindow()
         {
             InitializeComponent();
+        }
+        private void CoolButton_Click(object sender, RoutedEventArgs e)
+        {
+            _clickCount++;
+            ClickCounterTextBox.Text = _clickCount.ToString();
         }
     }
 }

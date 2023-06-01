@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xaml_Framework", "Xaml_Fram
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xaml_Core", "Xaml_Core\Xaml_Core.csproj", "{5B74CFA9-A9AA-44DE-8443-DFC633909603}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms_Framework", "WindowsForms_Framework\WindowsForms_Framework.csproj", "{FDD86A3F-EA96-41B7-A128-1BA0E459A09A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{5B74CFA9-A9AA-44DE-8443-DFC633909603}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B74CFA9-A9AA-44DE-8443-DFC633909603}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B74CFA9-A9AA-44DE-8443-DFC633909603}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDD86A3F-EA96-41B7-A128-1BA0E459A09A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDD86A3F-EA96-41B7-A128-1BA0E459A09A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDD86A3F-EA96-41B7-A128-1BA0E459A09A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDD86A3F-EA96-41B7-A128-1BA0E459A09A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
