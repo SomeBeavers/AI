@@ -1,0 +1,8 @@
+{
+  "solution": {
+    "path": "AI.sln",
+    "projects": [
+      "Lib_with_language_version_set_in_ReSharper_settings\\Lib_with_language_version_set_in_ReSharper_settings.csproj"
+    ]
+  }
+}

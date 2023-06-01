@@ -1,0 +1,9 @@
+{
+  "solution": {
+    "path": "AI.sln",
+    "projects": [
+      "Core_Lib_net7\\Core_Lib_net7.csproj",
+      "Framework_App_4_8\\Framework_App_4_8.csproj"
+    ]
+  }
+}
