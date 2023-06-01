@@ -9,7 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework_App_4_8", "Framew
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{7630D8C5-2BD1-4407-AF59-A648D388B518}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multi", "Multi\Multi.csproj", "{D43E5055-9FF0-47C5-B715-95D15DB1D212}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multi", "Multi\Multi.csproj", "{D43E5055-9FF0-47C5-B715-95D15DB1D212}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xaml_Framework", "Xaml_Framework\Xaml_Framework.csproj", "{A26FA850-EB63-4EC1-A525-122E5E1D33E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xaml_Core", "Xaml_Core\Xaml_Core.csproj", "{5B74CFA9-A9AA-44DE-8443-DFC633909603}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +33,14 @@ Global
 		{D43E5055-9FF0-47C5-B715-95D15DB1D212}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D43E5055-9FF0-47C5-B715-95D15DB1D212}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D43E5055-9FF0-47C5-B715-95D15DB1D212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A26FA850-EB63-4EC1-A525-122E5E1D33E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A26FA850-EB63-4EC1-A525-122E5E1D33E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A26FA850-EB63-4EC1-A525-122E5E1D33E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A26FA850-EB63-4EC1-A525-122E5E1D33E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B74CFA9-A9AA-44DE-8443-DFC633909603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B74CFA9-A9AA-44DE-8443-DFC633909603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B74CFA9-A9AA-44DE-8443-DFC633909603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B74CFA9-A9AA-44DE-8443-DFC633909603}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

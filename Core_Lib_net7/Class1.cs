@@ -5,6 +5,10 @@
     /// </summary>
     public record struct Class1(int Age)
     {
+        private const string myRootPath = "VALUE";
+        public const string a =  $"{myRootPath}/README.md";
+
+
         /// <summary>
         /// Gets the name of this <see cref="Class1"/> instance.
         /// </summary>
