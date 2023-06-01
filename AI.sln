@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms_Framework", "W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinForms_Core", "WinForms_Core\WinForms_Core.csproj", "{7941779E-2471-4D5D-866C-8C616496FBA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib_with_language_version_set_in_ReSharper_settings", "Lib_with_language_version_set_in_ReSharper_settings\Lib_with_language_version_set_in_ReSharper_settings.csproj", "{D8419861-F702-4531-8A52-B9D3E5960D77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{7941779E-2471-4D5D-866C-8C616496FBA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7941779E-2471-4D5D-866C-8C616496FBA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7941779E-2471-4D5D-866C-8C616496FBA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8419861-F702-4531-8A52-B9D3E5960D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8419861-F702-4531-8A52-B9D3E5960D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8419861-F702-4531-8A52-B9D3E5960D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8419861-F702-4531-8A52-B9D3E5960D77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
