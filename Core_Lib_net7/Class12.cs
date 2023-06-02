@@ -32,4 +32,8 @@
             Name = name;
         }
     }
+
+    public class Class1Test
+    {
+    }
 }
