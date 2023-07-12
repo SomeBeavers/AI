@@ -3,11 +3,11 @@
 
     public class Multi1
     {
-        const string myRootPath = "/src/to/my/root";
+        const string testRootPath = "/src/to/test/root";
 
-        public void MyMethod()
+        public void MyMethod(int t)
         {
-            string myWholeFilePath = $"{myRootPath}/README.md";
+            string testWholeFilePath = $"{testRootPath}/README.md";
         }
 #if NETCOREAPP
 

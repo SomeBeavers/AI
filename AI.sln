@@ -23,6 +23,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib_with_language_version_s
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VB_Framework_4", "VB_Framework_4\VB_Framework_4.vbproj", "{F199F3BA-D24A-40AD-BA37-0061F88BCF58}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{55D873B5-C5B5-4CD9-99D5-4B1317D8C401}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core_App", "Core_App\Core_App.csproj", "{4FB55BFC-6CB4-4311-96D2-575DA11E231A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +69,14 @@ Global
 		{F199F3BA-D24A-40AD-BA37-0061F88BCF58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F199F3BA-D24A-40AD-BA37-0061F88BCF58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F199F3BA-D24A-40AD-BA37-0061F88BCF58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D873B5-C5B5-4CD9-99D5-4B1317D8C401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D873B5-C5B5-4CD9-99D5-4B1317D8C401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D873B5-C5B5-4CD9-99D5-4B1317D8C401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D873B5-C5B5-4CD9-99D5-4B1317D8C401}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FB55BFC-6CB4-4311-96D2-575DA11E231A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB55BFC-6CB4-4311-96D2-575DA11E231A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB55BFC-6CB4-4311-96D2-575DA11E231A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB55BFC-6CB4-4311-96D2-575DA11E231A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
