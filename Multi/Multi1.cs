@@ -9,7 +9,7 @@
         {
             string testWholeFilePath = $"{testRootPath}/README.md";
         }
-#if NETCOREAPP
+#if !NETCOREAPP
 
 
 

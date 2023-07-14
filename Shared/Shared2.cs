@@ -9,6 +9,7 @@
 #else
         public void Test2()
         {
+new Shared2();
         }
 #endif
 

@@ -17,6 +17,11 @@ namespace Framework_App_4_8
 
             Console.WriteLine("another");
         }
+
+        public static void Test()
+        {
+            Console.WriteLine("test");
+        }
     }
 
 }
