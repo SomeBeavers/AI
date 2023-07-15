@@ -7,10 +7,6 @@ namespace NumberGuessingGame
     {
         static void Main(string[] args)
         {
-            var v = $"Count is\t: {this.Is.A.Really(long(expr))
-                .That.I.Should(
-                    be + able)[
-                    to.Wrap()]}.";
 
             JsonConvert.SerializeObject(new { });
             Random random = new Random();

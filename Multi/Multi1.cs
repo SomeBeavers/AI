@@ -7,7 +7,7 @@
 
         public void MyMethod(int t)
         {
-            string testWholeFilePath = $"{testRootPath}/README.md";
+            string testWholeFilePath = $"{testRootPath}/MyMethod.md";
         }
 #if !NETCOREAPP
 
@@ -15,6 +15,7 @@
 
         public void MyMethodForNetCoreOnly()
         {
+ string testWholeFilePath = $"{testRootPath}/MyMethodForNetCoreOnly.md";
             // Your .NET Core specific implementation
         }
 #endif

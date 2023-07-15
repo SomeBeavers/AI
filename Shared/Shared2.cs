@@ -21,5 +21,9 @@ new Shared2();
 
 #endif
 
+        public void Test3()
+        {
+        }
+
     }
 }

@@ -9,6 +9,7 @@
     <Grid>
         <Button x:Name="CoolButton" Content="Cool Button" Click="CoolButton_Click" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Height="30"/>
         <TextBox x:Name="ClickCounterTextBox" HorizontalAlignment="Left" Height="23" Margin="10,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="ResetButton" Content="Reset" Click="ResetButton_Click" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="100" Height="30"/>
 
     </Grid>
 </Window>

@@ -11,7 +11,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="CoolButton" Content="Cool Button" Click="CoolButton_Click" Margin="5"/>
+        <Button x:Name="CoolButton" Content="Cool Button" Click="CoolButton_Click" Margin="5" AllowDrop="True"/>
         <TextBox x:Name="ClickCounterTextBox" Grid.Row="1" Margin="5" IsReadOnly="True"/>
+        <Button x:Name="ResetButton" Grid.Row="1" Content="Reset" Click="ResetButton_Click" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>

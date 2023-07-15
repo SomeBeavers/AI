@@ -30,5 +30,14 @@ namespace Xaml_Framework
             _clickCounter++;
             ClickCounterTextBox.Text = $"Clicks: {_clickCounter}";
         }
+
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Test()
+        {
+        }
     }
 }
