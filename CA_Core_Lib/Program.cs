@@ -4,4 +4,8 @@ using CA_Core_Lib;
 
 Console.WriteLine("Hello, World!");
 
-new InvokedOn().Run();
+var declaration = new InvokedOn().Declaration(typeof(Beaver));
+
+public class Beaver
+{
+}
