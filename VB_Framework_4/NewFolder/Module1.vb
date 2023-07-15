@@ -4,7 +4,7 @@
         Sub Main()
             Dim i As Integer
         End Sub
-        Public Sub MyMethod()
+        Public Sub MyMethodFromVB()
             Dim myRootPath As String = Nothing ' Replace this with the actual value of myRootPath
             If myRootPath Is Nothing Then
                 Console.WriteLine("myRootPath is null")

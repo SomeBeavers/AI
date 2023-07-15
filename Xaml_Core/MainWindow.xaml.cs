@@ -31,9 +31,13 @@ namespace Xaml_Core
             ClickCounterTextBox.Text = _clickCount.ToString();
         }
 
-        private void ResetButton_Click(object sender, RoutedEventArgs e)
-        {
-            // TODO: make a button that resets the click counter
-        }
+private void ResetButton_Click(object sender, RoutedEventArgs e)
+{
+            // Reset the click counter
+            _clickCount = 0;
+    // Update the ClickCounterTextBox
+    ClickCounterTextBox.Text = "0";
+}
+
     }
 }

@@ -7,7 +7,7 @@ namespace NumberGuessingGame
     {
         static void Main(string[] args)
         {
-
+            var maxValue = Int16.MaxValue;
             JsonConvert.SerializeObject(new { });
             Random random = new Random();
             int secretNumber = random.Next(1, 101);
