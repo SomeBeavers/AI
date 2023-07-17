@@ -2,9 +2,8 @@
 
 using CA_Core_Lib;
 
-Console.WriteLine("Hello, World!");
-
-var declaration = new InvokedOn().Declaration(typeof(Beaver));
+var declaration = new InvokedOn().Declaration(new List<Type> { typeof(Beaver) });
+Console.WriteLine(declaration);
 
 public class Beaver
 {
