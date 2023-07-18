@@ -8,7 +8,7 @@ public abstract class AbstractClass
     public bool IsTrue;
 
     public abstract string GetName(string name);
-    public abstract string GetName2(string name);
+    public abstract string GetName2(string name, int myInt);
 
     public abstract int GetAge(int age);
     public abstract InnerClass GetInnerClass(InnerClass innerClass);

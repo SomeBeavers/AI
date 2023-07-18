@@ -1,28 +1,58 @@
 ﻿namespace CA_Core_Lib.ExplainForClass;
 
-class AbstractClassImpl : AbstractClass
+public class AbstractClassImpl : AbstractClass
 {
+    public required string Name;
+
+    public AbstractClassImpl(string name)
+    {
+        Name = name;
+    }
+
+    public string IP { get; set; }
+
     public override string GetName(string name)
     {
-
+        return name;
     }
-    public override string GetName2(string name)
+
+    public override string GetName2(string name, int myInt)
     {
-
+        return name + "2";
     }
+
     public override int GetAge(int age)
     {
-        // Implement this method
-        throw new NotImplementedException();
+        return age;
     }
+
     public override InnerClass GetInnerClass(InnerClass innerClass)
     {
-        // Implement this method
-        throw new NotImplementedException();
+        return innerClass;
     }
+
     public override bool GetIsTrue(bool isTrue)
     {
-        // Implement this method
-        throw new NotImplementedException();
+        return isTrue;
+    }
+
+    public virtual string GetIP()
+    {
+        return IP;
     }
 }
+
+class UseAbstractClassImpl
+{
+    public void UseAbstractClassImplMethod()
+    {
+        var abstractClassImpl = new AbstractClassImpl("name")
+        {
+            Name = "Jane Doe"
+        };
+
+        var name = abstractClassImpl.GetName("name");
+        abstractClassImpl.GetIP();
+    }
+}
+
