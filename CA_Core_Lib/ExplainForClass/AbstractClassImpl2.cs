@@ -1,6 +1,6 @@
 ﻿namespace CA_Core_Lib.ExplainForClass;
 
-class AbstractClassImpl2 : AbstractClass
+class AbstractClassImpl2 : AbstractClass, ICommonMethods
 {
     public override string GetName(string name)
     {

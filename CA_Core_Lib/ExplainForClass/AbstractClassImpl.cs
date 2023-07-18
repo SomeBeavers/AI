@@ -1,6 +1,6 @@
 ﻿namespace CA_Core_Lib.ExplainForClass;
 
-public class AbstractClassImpl : AbstractClass
+public class AbstractClassImpl : AbstractClass, ICommonMethods, IMy2
 {
     public required string Name;
 
@@ -41,18 +41,3 @@ public class AbstractClassImpl : AbstractClass
         return IP;
     }
 }
-
-class UseAbstractClassImpl
-{
-    public void UseAbstractClassImplMethod()
-    {
-        var abstractClassImpl = new AbstractClassImpl("name")
-        {
-            Name = "Jane Doe"
-        };
-
-        var name = abstractClassImpl.GetName("name");
-        abstractClassImpl.GetIP();
-    }
-}
-

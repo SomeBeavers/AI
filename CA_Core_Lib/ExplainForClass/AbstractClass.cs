@@ -14,7 +14,3 @@ public abstract class AbstractClass
     public abstract InnerClass GetInnerClass(InnerClass innerClass);
     public abstract bool GetIsTrue(bool isTrue);
 }
-
-public class InnerClass
-{
-}
