@@ -3,6 +3,15 @@
 public class Beaver : IAnimal
 {
     public string Name { get; set; }
+    public Fluffiness Fluffiness { get; set; }
+
+    #region constructors
+    public Beaver(string name, Fluffiness fluffiness)
+    {
+
+    }
+
+    #endregion
 
     public static Beaver Create(string name)
     {
@@ -22,9 +31,4 @@ public class Beaver : IAnimal
     }
 }
 
-public static class Extension
-{
-    public static Beaver ToBeaver(this string name)
-    {
-    }
-}
+public enum Fluffiness { NotFluffy, Fluffy, VeryFluffy }
