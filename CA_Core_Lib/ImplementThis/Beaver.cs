@@ -2,21 +2,27 @@
 
 public class Beaver : IAnimal
 {
-    public string Name { get; set; }
-    public Fluffiness Fluffiness { get; set; }
-
     #region constructors
-    public Beaver(string name, Fluffiness fluffiness)
+    public Beaver(string name, Fluffiness fluffiness) : this(name)
     {
-
+        Fluffiness = fluffiness;
+    }
+    public Beaver(string name)
+    {
+        Name = name;
+        Fluffiness = Fluffiness.NotFluffy;
     }
 
     #endregion
 
+    public Fluffiness Fluffiness { get; set; }
+    public string Name { get; set; }
+
     public static Beaver Create(string name)
     {
-        return new Beaver { Name = name };
+        return new Beaver(name, default);
     }
+
 
     public async Task<string> GetSoundAsync()
     {
@@ -31,4 +37,19 @@ public class Beaver : IAnimal
     }
 }
 
-public enum Fluffiness { NotFluffy, Fluffy, VeryFluffy }
+public class UseBeaver
+{
+    public void Use()
+    {
+        Beaver beaver = new Beaver("Bucky", Fluffiness.VeryFluffy);
+        Beaver beaver2 = Beaver.Create("Bucky");
+    }
+}
+
+
+public enum Fluffiness
+{
+    NotFluffy,
+    Fluffy,
+    VeryFluffy
+}

@@ -1,7 +1,7 @@
-﻿public class Beaver
-{
-    public void Test()
-    {
-        string s = "";
-    }
-}
+﻿//public class Beaver
+//{
+//    public void Test()
+//    {
+//        string s = "";
+//    }
+//}
