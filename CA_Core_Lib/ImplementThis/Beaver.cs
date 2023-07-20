@@ -54,27 +54,3 @@ public class Beaver(Fluffiness fluffiness) : IAnimal
     {
     }
 }
-
-
-
-file class UseBeaver
-{
-    public void Use()
-    {
-        Beaver beaver = new Beaver(Fluffiness.VeryFluffy);
-        Beaver beaver2 = Beaver.Create(Fluffiness.ExtremelyFluffy);
-    }
-    public void EmptyMethod(int myInt, int myInt2)
-    {
-        //unused method
-    }
-}
-
-
-public enum Fluffiness
-{
-    NotFluffy,
-    Fluffy,
-    VeryFluffy,
-    ExtremelyFluffy
-}
