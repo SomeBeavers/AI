@@ -1,26 +1,28 @@
 ﻿namespace CA_Core_Lib.ImplementThis;
 
-public class Beaver : IAnimal
+public class Beaver(Fluffiness parameter) : IAnimal
 {
-    #region constructors
-    public Beaver(string name, Fluffiness fluffiness) : this(name)
-    {
-        Fluffiness = fluffiness;
-    }
-    public Beaver(string name)
-    {
-        Name = name;
-        Fluffiness = Fluffiness.NotFluffy;
-    }
 
-    #endregion
-
-    public Fluffiness Fluffiness { get; set; }
+    #region Properties
     public string Name { get; set; }
-
-    public static Beaver Create(string name)
+    public BeaverHome Home { get; set; }
+    #endregion
+    #region Methods
+    public static Beaver Create(Fluffiness fluffiness)
     {
-        return new Beaver(name, default);
+        return new Beaver(fluffiness);
+    }
+
+    public static List<Beaver> CreateBeavers(List<string> names)
+    {
+        var beavers = new List<Beaver>();
+        LocalFunction(beavers);
+        return beavers;
+
+        void LocalFunction(List<Beaver> t)
+        {
+            t.AddRange(names.Select(name => new Beaver(Fluffiness.ExtremelyFluffy)));
+        }
     }
 
 
@@ -35,9 +37,26 @@ public class Beaver : IAnimal
         await Task.Yield(); // Simulate async operation
         return Name;
     }
+    #endregion
+
+    public class BeaverHome
+    {
+        public Location Location { get; set; }
+
+        public BeaverHome(Location location)
+        {
+            Location = location;
+        }
+    }
+
+    public class Location
+    {
+    }
 }
 
-public class UseBeaver
+
+
+file class UseBeaver
 {
     public void Use()
     {
@@ -51,5 +70,6 @@ public enum Fluffiness
 {
     NotFluffy,
     Fluffy,
-    VeryFluffy
+    VeryFluffy,
+    ExtremelyFluffy
 }

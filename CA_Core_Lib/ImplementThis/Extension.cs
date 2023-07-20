@@ -2,9 +2,9 @@
 
 public static class Extension
 {
-    public static Beaver ToBeaver(this string name)
+    public static Beaver ToBeaver(this Fluffiness fluffiness)
     {
-        return Beaver.Create(name);
+        return Beaver.Create(fluffiness);
     }
 
     public static string TrimSpacesFromEnd(this string str)
