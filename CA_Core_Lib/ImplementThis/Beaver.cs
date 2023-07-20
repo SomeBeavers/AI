@@ -5,7 +5,7 @@ public class Beaver(Fluffiness fluffiness) : IAnimal
     public Fluffiness Fluffiness { get; } = fluffiness;
 
     #region Properties
-    public string Name { get; set; }
+    public string Name { get; init; }
     public BeaverHome Home { get; set; }
     #endregion
     #region Methods

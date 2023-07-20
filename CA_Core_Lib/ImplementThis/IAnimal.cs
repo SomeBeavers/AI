@@ -7,5 +7,5 @@ public interface IAnimal
         return Name;
     }
 
-    string Name { get; set; }
+    string Name { get; init; }
 }
