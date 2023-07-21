@@ -17,7 +17,7 @@ public class UseGenericClass
     }
 }
 
-struct MyStruct : IComparable<MyStruct>
+struct MyStruct : /*IComparable<MyStruct>,*/ IGenericInterface<MyStruct>
 {
     public int X;
     public int Y;
@@ -33,4 +33,9 @@ struct MyStruct : IComparable<MyStruct>
         x = X;
         y = Y;
     }
+}
+
+internal interface IGenericInterface<T>
+{
+    void GetNameMethod();
 }
