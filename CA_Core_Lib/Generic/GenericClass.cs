@@ -1,6 +1,6 @@
 ﻿namespace CA_Core_Lib.Generic;
 
-public class GenericClass<T> where T : struct, IComparable<T>
+public class GenericClass<T> where T : struct, IGenericInterface<T>
 {
     public void SortList(List<T> list)
     {
@@ -17,7 +17,7 @@ public class UseGenericClass
     }
 }
 
-struct MyStruct : IComparable<MyStruct>, IGenericInterface<MyStruct>
+struct MyStruct : IGenericInterface<MyStruct>
 {
     public int X;
     public int Y;
@@ -33,13 +33,23 @@ struct MyStruct : IComparable<MyStruct>, IGenericInterface<MyStruct>
         x = X;
         y = Y;
     }
+
+    public void GetNameMethod()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void GetNameMethod<U>()
+    {
+        throw new NotImplementedException();
+    }
 }
-struct MyStruct2 : IComparable<MyStruct2>, IGenericInterface<MyStruct2>
+struct MyStruct2 : IGenericInterface<MyStruct2>
 {
     public int X;
     public int Y;
 
-    public MyStruct(int x, int y)
+    public MyStruct2(int x, int y)
     {
         X = x;
         Y = y;
@@ -50,9 +60,14 @@ struct MyStruct2 : IComparable<MyStruct2>, IGenericInterface<MyStruct2>
         x = X;
         y = Y;
     }
+
+    public void GetNameMethod<U>()
+    {
+        throw new NotImplementedException();
+    }
 }
 
-internal interface IGenericInterface<T>
+public interface IGenericInterface<T>
 {
-    void GetNameMethod();
+    void GetNameMethod<U>();
 }
