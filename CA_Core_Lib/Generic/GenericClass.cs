@@ -17,7 +17,24 @@ public class UseGenericClass
     }
 }
 
-struct MyStruct : /*IComparable<MyStruct>,*/ IGenericInterface<MyStruct>
+struct MyStruct : IComparable<MyStruct>, IGenericInterface<MyStruct>
+{
+    public int X;
+    public int Y;
+
+    public MyStruct(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
+
+    public void Deconstruct(out int x, out int y)
+    {
+        x = X;
+        y = Y;
+    }
+}
+struct MyStruct2 : IComparable<MyStruct2>, IGenericInterface<MyStruct2>
 {
     public int X;
     public int Y;
