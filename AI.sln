@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CA_Core_Lib", "CA_Core_Lib\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core_Lib_Referenced", "Core_Lib_Referenced\Core_Lib_Referenced.csproj", "{A6391A21-A078-4253-92F0-D4CAB6E06606}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuget", "Nuget\Nuget.csproj", "{60CBC2B4-377C-4BBA-8F33-BA17EA53DFE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nuget", "Nuget\Nuget.csproj", "{60CBC2B4-377C-4BBA-8F33-BA17EA53DFE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,5 +129,10 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E06B84F-1795-45B4-86F0-294011CF2F20}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\Shared.projitems*{7630d8c5-2bd1-4407-af59-a648d388b518}*SharedItemsImports = 13
+		Shared\Shared.projitems*{9712a339-85bd-4c93-b62f-3f577212af2c}*SharedItemsImports = 4
+		Shared\Shared.projitems*{a2835be9-0be0-4aa4-947d-2c93ade4943d}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

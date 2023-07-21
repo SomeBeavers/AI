@@ -9,14 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Nuget" Version="1.0.1" />
+    <Folder Include="Generic\" />
+    <Folder Include="UseAttribute\" />
+    <Folder Include="UseLocalNuget\" />
+    <Folder Include="UseNuget\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Generic\" />
-    <Folder Include="UseLocalNuget\" />
-    <Folder Include="UseNuget\" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Nuget" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>
