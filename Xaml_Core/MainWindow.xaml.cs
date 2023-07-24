@@ -33,11 +33,11 @@ namespace Xaml_Core
 
 private void ResetButton_Click(object sender, RoutedEventArgs e)
 {
-            // Reset the click counter
-            _clickCount = 0;
+    // Reset the click counter
+    _clickCount = 0;
     // Update the ClickCounterTextBox
     ClickCounterTextBox.Text = "0";
-}
+        }
 
     }
 }

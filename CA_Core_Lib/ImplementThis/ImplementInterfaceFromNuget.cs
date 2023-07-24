@@ -4,7 +4,8 @@ public class ImplementInterfaceFromNuget : Newtonsoft.Json.JsonConverter
 {
     public override void WriteJson(JsonWriter writer, object? value, JsonSerializer serializer)
     {
-        
+        JsonConvert.SerializeObject();
+        new ImplementInterfaceFromNuget()
     }
 
     public override object? ReadJson(JsonReader reader, Type objectType, object? existingValue, JsonSerializer serializer)

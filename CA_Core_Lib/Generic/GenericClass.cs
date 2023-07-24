@@ -41,6 +41,13 @@ struct MyStruct : IGenericInterface<MyStruct>
 
     public void GetNameMethod<U>()
     {
+
+
+        throw new NotImplementedException();
+    }
+
+    public void GetNameMethod<T>(T t)
+    {
         throw new NotImplementedException();
     }
 }
@@ -65,9 +72,24 @@ struct MyStruct2 : IGenericInterface<MyStruct2>
     {
         throw new NotImplementedException();
     }
+    public void GetNameMethod<T>(T t)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public interface IGenericInterface<T>
 {
     void GetNameMethod<U>();
+}
+
+
+public class UseMyStruct
+{
+    public void Use()
+    {
+        var myStruct = new MyStruct(1, 2);
+        var (x, y) = myStruct;
+        myStruct.GetNameMethod<int>();
+    }
 }
