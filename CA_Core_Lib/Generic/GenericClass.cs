@@ -2,12 +2,24 @@
 
 public class GenericClass<T> where T : struct, IGenericInterface<T>
 {
-    public void SortList(List<T> list)
+    private List<T>? _list;
+
+    public void SortList(List<T>? list)
     {
+        if (list == null) return;
         list.Sort();
+        _list = list;
+    }
+
+    public void PrintList()
+    {
+        if (_list == null) return;
+        foreach (var item in _list)
+        {
+            Console.WriteLine(item);
+        }
     }
 }
-
 
 public class UseGenericClass
 {
@@ -17,7 +29,7 @@ public class UseGenericClass
     }
 }
 
-struct MyStruct : IGenericInterface<MyStruct>
+internal struct MyStruct : IGenericInterface<MyStruct>
 {
     public int X;
     public int Y;
@@ -51,7 +63,8 @@ struct MyStruct : IGenericInterface<MyStruct>
         throw new NotImplementedException();
     }
 }
-struct MyStruct2 : IGenericInterface<MyStruct2>
+
+internal struct MyStruct2 : IGenericInterface<MyStruct2>
 {
     public int X;
     public int Y;
