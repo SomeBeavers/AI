@@ -1,6 +1,6 @@
 ﻿namespace CA_Core_Lib.ExplainForProperty;
 
-public class ExplainForProperty: IExplainForProperty
+public class ExplainForProperty<T>: IExplainForProperty<T>
 {
     private string _name;
     public string Name
@@ -20,13 +20,22 @@ public class ExplainForProperty: IExplainForProperty
     }
 
     public int Count { get; set; }
+    public List<T> TransformCount()
+    {
+        throw new NotImplementedException();
+    }
+
+    public int TransformCount(T transformation)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public class UseExplainForProperty
 {
     public void Test()
     {
-        IExplainForProperty explainForProperty = new ExplainForProperty("Name");
+        IExplainForProperty<string> explainForProperty = new ExplainForProperty<string>("Name");
 
         Console.WriteLine(explainForProperty.Count);
     }
