@@ -4,6 +4,7 @@ public interface IAnimal
 {
     public string GetName()
     {
+        int е = 1;
         return Name;
     }
 
