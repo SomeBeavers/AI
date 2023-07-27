@@ -1,25 +1,18 @@
-﻿namespace CA_Core_Lib.ExplainForProperty;
+﻿using System.Reflection;
 
-public class ExplainForPropertyAndMethod<T>: IExplainForProperty<T>
+namespace CA_Core_Lib.ExplainForProperty;
+
+public class ExplainForPropertyAndMethod<T> : IExplainForProperty<T>
 {
-    private string _name;
-    public string Name
-    {
-        get { return _name; }
-        init { _name = value; }
-    }
-
     public ExplainForPropertyAndMethod(string name)
     {
-        _name = name;
+        Name = name;
     }
 
-    public void PrintName()
-    {
-        Console.WriteLine(_name);
-    }
+    public string Name { get; init; }
 
     public int Count { get; set; }
+
     public List<T> TransformCount()
     {
         throw new NotImplementedException();
@@ -29,29 +22,9 @@ public class ExplainForPropertyAndMethod<T>: IExplainForProperty<T>
     {
         throw new NotImplementedException();
     }
-}
 
-public class UseExplainForProperty
-{
-    public void Test()
+    public void PrintName()
     {
-        IExplainForProperty<string> explainForProperty = new ExplainForPropertyAndMethod<string>("Name");
-
-        Console.WriteLine(explainForProperty.Count);
+        Console.WriteLine(Name);
     }
-}
-
-public abstract class AbstractClassWithGetFields
-{
-    public abstract void GetFields();
-}
-
-
-interface IExplainForProperty<T>
-{
-    public int Count { get; set; }
-
-    List<T> TransformCount();
-
-    int TransformCount(T transformation);
 }
