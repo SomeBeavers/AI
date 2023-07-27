@@ -12,6 +12,7 @@ public class Lambda1
     /// <param name="list">The list of items to check for null values.</param>
     public void Test<T>(List<T> list)
     {
+        Test2();
         var any = list.Where(x => x != null).Any(x => x == null);
     }
 

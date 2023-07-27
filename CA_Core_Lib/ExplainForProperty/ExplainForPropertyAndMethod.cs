@@ -1,6 +1,6 @@
 ﻿namespace CA_Core_Lib.ExplainForProperty;
 
-public class ExplainForProperty<T>: IExplainForProperty<T>
+public class ExplainForPropertyAndMethod<T>: IExplainForProperty<T>
 {
     private string _name;
     public string Name
@@ -9,7 +9,7 @@ public class ExplainForProperty<T>: IExplainForProperty<T>
         init { _name = value; }
     }
 
-    public ExplainForProperty(string name)
+    public ExplainForPropertyAndMethod(string name)
     {
         _name = name;
     }
@@ -35,11 +35,17 @@ public class UseExplainForProperty
 {
     public void Test()
     {
-        IExplainForProperty<string> explainForProperty = new ExplainForProperty<string>("Name");
+        IExplainForProperty<string> explainForProperty = new ExplainForPropertyAndMethod<string>("Name");
 
         Console.WriteLine(explainForProperty.Count);
     }
 }
+
+public abstract class AbstractClassWithGetFields
+{
+    public abstract void GetFields();
+}
+
 
 interface IExplainForProperty<T>
 {
