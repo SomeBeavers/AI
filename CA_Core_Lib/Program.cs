@@ -1,7 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using CA_Core_Lib;
-using CA_Core_Lib.ImplementThis;
+using CA_Core_Lib.ExplainForMethod;
 
-var declaration = new InvokedOn().Declaration(new List<Type> { typeof(Beaver) });
-Console.WriteLine(declaration);
+new Use().CreateComments(new Comment(){Link = "Jane Doe"});

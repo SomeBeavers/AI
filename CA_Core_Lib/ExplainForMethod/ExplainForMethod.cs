@@ -41,4 +41,9 @@ public class UseExplainForMethod
 public class Comment
 {
     public string Link { get; set; }
+
+    public override string ToString()
+    {
+        return $"Link: {Link}";
+    }
 }
