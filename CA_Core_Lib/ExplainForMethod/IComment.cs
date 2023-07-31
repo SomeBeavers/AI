@@ -52,13 +52,8 @@ internal class CommentsRepo<T> : IComments<T> where T : class
         throw new NotImplementedException();
     }
 
-    void IComments<T>.Print()
+    public void Print()
     {
-        //foreach (var entity in Entities)
-        //{
-        //    Console.WriteLine(entity);
-        //}
-
         var value = Entities.FirstOrDefault();
 
         if (value == null)
@@ -73,7 +68,7 @@ internal class CommentsRepo<T> : IComments<T> where T : class
 
     public T GetEntityById(int id)
     {
-        throw new NotImplementedException();
+        return Entities[id];
     }
 
     public IEnumerable<T> GetEntities()
@@ -117,11 +112,11 @@ public class Use
 {
     public void CreateComments(Comment comment)
     {
-        IComments<Comment> comments = new CommentsRepo<Comment>();
-        comments.Add(comment);
-        comments.Print();
+        //IComments<Comment> comments = new CommentsRepo<Comment>();
+        //comments.Add(comment);
+        //comments.Print();
 
         var commentsRepo = new CommentsRepo<Comment>();
-        ((IComments < Comment > )commentsRepo).Print();
+        commentsRepo.Print();
     }
 }
