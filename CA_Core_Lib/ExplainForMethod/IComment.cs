@@ -39,81 +39,105 @@ public abstract class Repo<T> where T : class
         Expression<Func<T, TKey>> thenByLambda, bool thenIsAsc);
 }
 
-internal class CommentsRepo<T> : Repo<T>, IComments<T> where T : class
+public class Countable<T>
 {
-    public List<T> Entities { get; set; } = new();
+    public int Count { get; set; }
+/// <summary>
+/// Increments the Count property by the specified value.
+/// </summary>
+/// <param name="value">The value to add to the Count property.</param>
+    public virtual void MyCount(int value)
+    {
+        Count += value;
+    }
+}
 
+internal class CommentsRepo<T> : Countable<T>, /*Repo<T>,*/ IComments<T> where T : class
+{
+    public override void MyCount(int value)
+    {
+        Count-=value;
+    }
+
+    #region Properties
+    public List<T> Entities { get; set; } = new();
+    #endregion
+    #region IComments Implementation
+
+    public void Add(T entity)
+    {
+        Console.WriteLine("Add to Entities");
+        Entities = new List<T>();
+        Entities.Add(entity);
+    }
 
     public void Update(T entity)
     {
         throw new NotImplementedException();
     }
-
     public void Delete(T entity)
     {
         throw new NotImplementedException();
     }
-
     public void Print()
     {
         var value = Entities.FirstOrDefault();
-
         if (value == null)
             Console.WriteLine("No data");
         else
             Console.WriteLine(value);
     }
-
-    public override T GetEntityById(int id)
-    {
-        return Entities[id];
-    }
-
-    public override IEnumerable<T> GetEntities()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override IEnumerable<T> GetAll()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override IEnumerable<T> GetEntitiesByPage(int pageSize, int pageIndex, out int total)
-    {
-        throw new NotImplementedException();
-    }
-
-    public override IEnumerable<T> GetEntitiesByPage(int pageSize, int pageIndex, out int total,
-        Expression<Func<T, bool>> whereLambda)
-    {
-        throw new NotImplementedException();
-    }
-
-    public override IEnumerable<T> GetEntitiesByPage<TKey>(int pageSize, int pageIndex, out int total,
-        Expression<Func<T, bool>> whereLambda,
-        Expression<Func<T, TKey>> orderByLambda, bool isAsc)
-    {
-        throw new NotImplementedException();
-    }
-
-    public override IEnumerable<T> GetEntitiesByPage<TKey>(int pageSize, int pageIndex, out int total,
-        Expression<Func<T, bool>> whereLambda,
-        Expression<Func<T, TKey>> orderByLambda, bool isAsc, Expression<Func<T, TKey>> thenByLambda, bool thenIsAsc)
-    {
-        throw new NotImplementedException();
-    }
+    #endregion
+    //#region Repo Overrides
+    //public override T GetEntityById(int id)
+    //{
+    //    return Entities[id];
+    //}
+    //public override IEnumerable<T> GetEntities()
+    //{
+    //    throw new NotImplementedException();
+    //}
+    //public override IEnumerable<T> GetAll()
+    //{
+    //    throw new NotImplementedException();
+    //}
+    //public override IEnumerable<T> GetEntitiesByPage(int pageSize, int pageIndex, out int total)
+    //{
+    //    throw new NotImplementedException();
+    //}
+    //public override IEnumerable<T> GetEntitiesByPage(int pageSize, int pageIndex, out int total,
+    //    Expression<Func<T, bool>> whereLambda)
+    //{
+    //    throw new NotImplementedException();
+    //}
+    //public override IEnumerable<T> GetEntitiesByPage<TKey>(int pageSize, int pageIndex, out int total,
+    //    Expression<Func<T, bool>> whereLambda,
+    //    Expression<Func<T, TKey>> orderByLambda, bool isAsc)
+    //{
+    //    throw new NotImplementedException();
+    //}
+    //public override IEnumerable<T> GetEntitiesByPage<TKey>(int pageSize, int pageIndex, out int total,
+    //    Expression<Func<T, bool>> whereLambda,
+    //    Expression<Func<T, TKey>> orderByLambda, bool isAsc, Expression<Func<T, TKey>> thenByLambda, bool thenIsAsc)
+    //{
+    //    throw new NotImplementedException();
+    //}
+    //#endregion
 }
 
 public class Use
 {
-    public void CreateComments(Comment comment)
+    public void CreateComments(List<Comment> comments, int id)
     {
-        //IComments<Comment> comments = new CommentsRepo<Comment>();
-        //comments.Add(comment);
-        //comments.Print();
-
         var commentsRepo = new CommentsRepo<Comment>();
-        commentsRepo.Print();
+        foreach (var comment in comments)
+        {
+            commentsRepo.Add(comment);
+            commentsRepo.Print();
+        }
+
+        commentsRepo.MyCount(1);
+
+        //commentsRepo.GetEntityById(id);
     }
 }

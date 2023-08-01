@@ -2,4 +2,11 @@
 
 using CA_Core_Lib.ExplainForMethod;
 
-new Use().CreateComments(new Comment(){Link = "Jane Doe"});
+var comments = new List<Comment>
+{
+    new() { Link = "Jane Doe" },
+    new() { Link = "John Doe" },
+    new() { Link = "Alice" },
+    new() { Link = "Bob" },
+};
+new Use().CreateComments(comments, 1);
