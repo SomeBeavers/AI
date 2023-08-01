@@ -1,4 +1,4 @@
-﻿using System.Linq.Expressions;
+﻿using X = System.Linq.Expressions;
 
 namespace CA_Core_Lib.ExplainForMethod;
 
@@ -29,14 +29,14 @@ public abstract class Repo<T> where T : class
     public abstract IEnumerable<T> GetEntitiesByPage(int pageSize, int pageIndex, out int total);
 
     public abstract IEnumerable<T> GetEntitiesByPage(int pageSize, int pageIndex, out int total,
-        Expression<Func<T, bool>> whereLambda);
+        X.Expression<Func<T, bool>> whereLambda);
 
     public abstract IEnumerable<T> GetEntitiesByPage<TKey>(int pageSize, int pageIndex, out int total,
-        Expression<Func<T, bool>> whereLambda, Expression<Func<T, TKey>> orderByLambda, bool isAsc);
+        X.Expression<Func<T, bool>> whereLambda, X.Expression<Func<T, TKey>> orderByLambda, bool isAsc);
 
     public abstract IEnumerable<T> GetEntitiesByPage<TKey>(int pageSize, int pageIndex, out int total,
-        Expression<Func<T, bool>> whereLambda, Expression<Func<T, TKey>> orderByLambda, bool isAsc,
-        Expression<Func<T, TKey>> thenByLambda, bool thenIsAsc);
+        X.Expression<Func<T, bool>> whereLambda, X.Expression<Func<T, TKey>> orderByLambda, bool isAsc,
+        X.Expression<Func<T, TKey>> thenByLambda, bool thenIsAsc);
 }
 
 public class Countable<T>

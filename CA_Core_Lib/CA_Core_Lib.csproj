@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <Folder Include="Generic\" />
+    <Folder Include="ExplainForConstructor\" />
     <Folder Include="UseAttribute\" />
     <Folder Include="UseLocalNuget\" />
     <Folder Include="UseNuget\" />
