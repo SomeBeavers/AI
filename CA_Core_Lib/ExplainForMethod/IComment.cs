@@ -42,10 +42,11 @@ public abstract class Repo<T> where T : class
 public class Countable<T>
 {
     public int Count { get; set; }
-/// <summary>
-/// Increments the Count property by the specified value.
-/// </summary>
-/// <param name="value">The value to add to the Count property.</param>
+
+    /// <summary>
+    ///     Increments the Count property by the specified value.
+    /// </summary>
+    /// <param name="value">The value to add to the Count property.</param>
     public virtual void MyCount(int value)
     {
         Count += value;
@@ -54,14 +55,23 @@ public class Countable<T>
 
 internal class CommentsRepo<T> : Countable<T>, /*Repo<T>,*/ IComments<T> where T : class
 {
-    public override void MyCount(int value)
+    public CommentsRepo(List<T> entities)
     {
-        Count-=value;
+        Entities = entities;
+        Count = entities.Count;
     }
 
     #region Properties
+
     public List<T> Entities { get; set; } = new();
+
     #endregion
+
+    public override void MyCount(int value)
+    {
+        Count -= value;
+    }
+
     #region IComments Implementation
 
     public void Add(T entity)
@@ -75,10 +85,12 @@ internal class CommentsRepo<T> : Countable<T>, /*Repo<T>,*/ IComments<T> where T
     {
         throw new NotImplementedException();
     }
+
     public void Delete(T entity)
     {
         throw new NotImplementedException();
     }
+
     public void Print()
     {
         var value = Entities.FirstOrDefault();
@@ -87,7 +99,9 @@ internal class CommentsRepo<T> : Countable<T>, /*Repo<T>,*/ IComments<T> where T
         else
             Console.WriteLine(value);
     }
+
     #endregion
+
     //#region Repo Overrides
     //public override T GetEntityById(int id)
     //{
