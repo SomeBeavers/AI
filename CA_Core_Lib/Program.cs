@@ -9,4 +9,4 @@ var comments = new List<Comment>
     new() { Link = "Alice" },
     new() { Link = "Bob" },
 };
-new Use().CreateComments(comments, 1);
+new Use().CreateComments(comments);
