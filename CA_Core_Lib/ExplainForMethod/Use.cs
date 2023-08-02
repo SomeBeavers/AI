@@ -38,10 +38,11 @@ public class Use
         lambda1("", 18);
     }
 
-    private void GetCount(int count)
-    {
-        throw new NotImplementedException();
-    }
+private void GetCount(int count)
+{
+    Console.WriteLine($"Count is: {count}");
+}
+
 }
 
 public class Assignment

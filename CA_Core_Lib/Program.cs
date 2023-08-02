@@ -10,3 +10,13 @@ var comments = new List<Comment>
     new() { Link = "Bob" },
 };
 new Use().CreateComments(comments);
+
+Console.WriteLine(SomeEnum.IntVal3.Equals(3));
+
+enum SomeEnum
+{
+    IntVal1 = 1,
+    IntVal2 = 2,
+    IntVal3 = 3
+}
+
