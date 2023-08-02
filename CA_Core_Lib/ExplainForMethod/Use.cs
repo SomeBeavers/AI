@@ -6,7 +6,9 @@ public class Use
 {
     public void CreateComments(List<Comment> comments, int id = 0)
     {
-        dynamic s;
+        dynamic s = comments.First();
+        s.ToString();
+
         CommentsRepo<Comment> commentsRepo = new(comments);
         commentsRepo.Print();
 
@@ -23,10 +25,22 @@ public class Use
 
     public delegate int Delegate1(string name, int age);
 
-    public void Test()
+    public void Test(int[] parameter)
     {
+        Func<int[], int> a;
+        a = (int[] xs) => xs.Length;
+
+        var count = a(parameter);
+
+        GetCount(count);
+
         Delegate1 lambda1 = (string _ = "test string", int age = 1) => age;
         lambda1("", 18);
+    }
+
+    private void GetCount(int count)
+    {
+        throw new NotImplementedException();
     }
 }
 
@@ -79,7 +93,7 @@ public class Assignment
 
         var lambda7 = (int t = 1) => { };
         var lambda8 = (int c = 1) => { };
-        var lambda9 = (int d) => { };
+        Action<int> lambda9 = (int d) => { };
 
         lambda7 = lambda8;
 
