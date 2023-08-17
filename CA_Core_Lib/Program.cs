@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
+global using global::System.Threading.Tasks;
 using CA_Core_Lib.ExplainForMethod;
 
 var comments = new List<Comment>
@@ -12,6 +12,11 @@ var comments = new List<Comment>
 new Use().CreateComments(comments);
 
 Console.WriteLine(SomeEnum.IntVal3.Equals(3));
+
+void AddToComments(Comment comment)
+{
+
+}
 
 enum SomeEnum
 {

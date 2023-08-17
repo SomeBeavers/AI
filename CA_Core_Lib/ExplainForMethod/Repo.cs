@@ -19,3 +19,17 @@ public abstract class Repo<T> where T : class
         X.Expression<Func<T, bool>> whereLambda, X.Expression<Func<T, TKey>> orderByLambda, bool isAsc,
         X.Expression<Func<T, TKey>> thenByLambda, bool thenIsAsc);
 }
+
+public class Person
+{
+    public string Name { get; set; }
+    public void WriteName(string filePath)
+    {
+        File.WriteAllText(filePath, Name);
+    }
+
+    public void ReadName(string filePath)
+    {
+	    Name = File.ReadAllText(filePath);
+    }
+}

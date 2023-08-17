@@ -1,9 +1,57 @@
-﻿using System.Text;
+﻿using System.Collections.Immutable;
+using System.Text;
+using static CA_Core_Lib.InvokedOn;
+using System.Text.RegularExpressions;
 
 namespace CA_Core_Lib.ExplainForMethod;
 
-internal class CommentsRepo<T> : Countable<T>, /*Repo<T>,*/ IComments<T> where T : class
+internal class CommentsRepo<T> : Countable<T>, /*Repo<T>,*/ IComments<T> where T : class, new()
 {
+	public void Deconstruct(out int count, out Action<T> func, out ImmutableArray<T> array, out List<T> entities)
+	{
+		count = Count;
+		func = _func;
+		array = _array;
+		entities = Entities;
+	}
+
+	public static string Method(int i)
+	{
+		if (i == 0)
+			return GetString();
+
+		var text = GetString();
+		return text;
+		try
+		{
+			string a;
+			var match = Regex.Match(a, "^");
+		}
+		catch (Exception e)
+		{
+			Bar foo1 = new Bar();
+			Bar bar = new Bar();
+			Bar foo2 = new Bar();
+			Console.WriteLine(e);
+			throw;
+		}
+		string GetString() => "xyz";
+	}
+
+
+	public T this[int i]
+	{
+		get { return _array[i]; }
+	}
+
+	private readonly Action<T> _func = delegate(T arg)
+	{
+		Console.WriteLine(arg is not null) ;
+		return;
+	};
+
+    ImmutableArray<T> _array = ImmutableArray<T>.Empty;
+
     /// <summary>
     ///     Initializes a new instance of the <see cref="CommentsRepo{T}" /> class.
     /// </summary>
@@ -16,7 +64,10 @@ internal class CommentsRepo<T> : Countable<T>, /*Repo<T>,*/ IComments<T> where T
 
     public override string ToString()
     {
-        var builder = new StringBuilder();
+        Tuple<int, int> tuple = new(1, 2);
+	    ImmutableArray<T> add = _array.Add(new T());
+        Console.WriteLine(tuple.Item1);
+	    var builder = new StringBuilder();
         builder.AppendLine($"{nameof(CommentsRepo<T>)} with Count: {Count} and Entities count: {Entities.Count}");
         foreach (var entity in Entities) builder.AppendLine("\t" + entity);
         return builder.ToString();
@@ -40,10 +91,11 @@ internal class CommentsRepo<T> : Countable<T>, /*Repo<T>,*/ IComments<T> where T
     #region IComments Implementation
 
     public void Add(T entity)
-    {
-        Console.WriteLine("Add to Entities");
-        Entities.Add(entity);
-    }
+	{
+		_func(entity);
+		//Console.WriteLine("Add to Entities");
+		//Entities.Add(entity);
+	}
 
     public void Update(T entity)
     {
@@ -97,4 +149,8 @@ internal class CommentsRepo<T> : Countable<T>, /*Repo<T>,*/ IComments<T> where T
     //    throw new NotImplementedException();
     //}
     //#endregion
+}
+
+internal class Bar
+{
 }

@@ -40,7 +40,7 @@ public class Use
 
 private void GetCount(int count)
 {
-    Console.WriteLine($"Count is: {count}");
+   
 }
 
 }
