@@ -1,24 +1,33 @@
-﻿namespace CA_Core_Lib.ImplementThis.Persons;
+﻿using Microsoft.Extensions.Logging;
 
-public class Account
+namespace CA_Core_Lib.ImplementThis.Persons;
+
+public class Account(int id, string name, ILogger<Account> _logger)
 {
-	public int ID { get; set; }
-	public string Name { get; set; }
+	// NOTE: there can't be more than 10 accounts.
+	// TODO: why 10?
+	public static int _maxId = 10;
 
-	public Account(int id)
+	private readonly ILogger<Account> _logger = _logger;
+
+	public string Guid { get; private set; }
+
+	public required bool IsActive { get; set; }
+
+	public int ID { get; set; } = id;
+	public string Name { get; set; } = name;
+
+	public void SetGuid(string newGuid)
 	{
+		Guid = newGuid;
 	}
 
 
-
-
-	protected bool Equals(Account other)
+	public void Deconstruct(out int id, out string name)
 	{
-		return ID == other.ID;
+		id = ID;
+		name = Name;
+
+		_logger.LogInformation($"Deconstructing Account: ID = {id}, Name = {name}");
 	}
-}
-
-public class AcountRepo : IEnumerable<Account>
-{
-
 }

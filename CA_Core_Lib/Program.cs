@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 global using global::System.Threading.Tasks;
 using CA_Core_Lib.ExplainForMethod;
+using CA_Core_Lib.ImplementThis.Persons;
 
 var comments = new List<Comment>
 {
@@ -12,6 +13,8 @@ var comments = new List<Comment>
 new Use().CreateComments(comments);
 
 Console.WriteLine(SomeEnum.IntVal3.Equals(3));
+
+new UseAccountAndRepo().Use();
 
 void AddToComments(Comment comment)
 {
