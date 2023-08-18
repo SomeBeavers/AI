@@ -22,7 +22,18 @@ public class UseAccountAndRepo
 		return false;
 	}
 
-
+	public bool TrySetGuid(Account account, string newGuid)
+	{
+		try
+		{
+			account.SetGuid(newGuid);
+			return true;
+		}
+		catch (Exception)
+		{
+			return false;
+		}
+	}
 
 	public void Use()
 	{
@@ -62,6 +73,11 @@ public class UseAccountAndRepo
 		};
 		// Add the new Account to the AccountRepo
 		accountRepo.Add(account);
+	}
+
+	// TODO: implement method to delete an account
+	public void Test()
+	{
 	}
 
 
