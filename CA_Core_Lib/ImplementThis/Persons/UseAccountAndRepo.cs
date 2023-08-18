@@ -22,6 +22,31 @@ public class UseAccountAndRepo
 		return false;
 	}
 
+	/// <summary>
+	///     Tries to add the given accounts to the provided AccountRepo.
+	/// </summary>
+	/// <param name="accountRepo">The AccountRepo to which the accounts will be added.</param>
+	/// <param name="accounts">The accounts to be added to the AccountRepo.</param>
+	/// <returns>Returns true if all accounts are added successfully, false otherwise.</returns>
+	public bool TryAddAccounts(AccountRepo accountRepo, params Account[] accounts)
+	{
+		try
+		{
+			// Iterate over each account in the provided array
+			foreach (var account in accounts)
+				// Try to add the account to the AccountRepo
+				accountRepo.Add(account);
+			// If all accounts are added successfully, return true
+			return true;
+		}
+		catch (Exception)
+		{
+			// If any exception is thrown during the process, return false
+			return false;
+		}
+	}
+
+
 	public bool TrySetGuid(Account account, string newGuid)
 	{
 		try
@@ -66,6 +91,13 @@ public class UseAccountAndRepo
 
 	public void CreateNewAccount(AccountRepo accountRepo, ILogger<Account> logger)
 	{
+		var e =
+			from a1 in new List<string>()
+			from a2 in new List<string>()
+			from a3 in new List<string>()
+			select 1;
+
+
 		// Create a new Account
 		var account = new Account(1, "New Account", logger)
 		{
@@ -75,9 +107,10 @@ public class UseAccountAndRepo
 		accountRepo.Add(account);
 	}
 
-	// TODO: implement method to delete an account
+	
 	public void Test()
 	{
+		// implement method to delete an account
 	}
 
 
