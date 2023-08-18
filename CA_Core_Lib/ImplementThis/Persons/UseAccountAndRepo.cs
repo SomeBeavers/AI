@@ -23,19 +23,19 @@ public class UseAccountAndRepo
 	}
 
 	/// <summary>
-	///     Tries to add the given accounts to the provided AccountRepo.
+	///     Tries to add the given accounts to the provided CustomRepo.
 	/// </summary>
-	/// <param name="accountRepo">The AccountRepo to which the accounts will be added.</param>
-	/// <param name="accounts">The accounts to be added to the AccountRepo.</param>
+	/// <param name="customRepo">The CustomRepo to which the accounts will be added.</param>
+	/// <param name="accounts">The accounts to be added to the CustomRepo.</param>
 	/// <returns>Returns true if all accounts are added successfully, false otherwise.</returns>
-	public bool TryAddAccounts(AccountRepo accountRepo, params Account[] accounts)
+	public bool TryAddAccounts(CustomRepo<Account> customRepo, params Account[] accounts)
 	{
 		try
 		{
 			// Iterate over each account in the provided array
 			foreach (var account in accounts)
-				// Try to add the account to the AccountRepo
-				accountRepo.Add(account);
+				// Try to add the account to the CustomRepo
+				customRepo.Add(account);
 			// If all accounts are added successfully, return true
 			return true;
 		}
@@ -67,7 +67,7 @@ public class UseAccountAndRepo
 		// Create a logger
 		var logger = loggerFactory.CreateLogger<Account>();
 
-		var accountRepo = new AccountRepo();
+		var accountRepo = new CustomRepo<Account>();
 		for (var i = 1; i <= 10; i++)
 		{
 			// Now you can pass the logger to the Account constructor
@@ -89,7 +89,7 @@ public class UseAccountAndRepo
 	}
 
 
-	public void CreateNewAccount(AccountRepo accountRepo, ILogger<Account> logger)
+	public void CreateNewAccount(CustomRepo<Account> customRepo, ILogger<Account> logger)
 	{
 		var e =
 			from a1 in new List<string>()
@@ -103,8 +103,8 @@ public class UseAccountAndRepo
 		{
 			IsActive = true // Set the required property
 		};
-		// Add the new Account to the AccountRepo
-		accountRepo.Add(account);
+		// Add the new Account to the CustomRepo
+		customRepo.Add(account);
 	}
 
 	
@@ -114,10 +114,10 @@ public class UseAccountAndRepo
 	}
 
 
-	public Account GetAccount(AccountRepo accountRepo, int itemInRepo)
+	public Account GetAccount(CustomRepo<Account> customRepo, int itemInRepo)
 	{
-		if (itemInRepo >= 0 && itemInRepo < accountRepo.Count)
-			return accountRepo[itemInRepo];
+		if (itemInRepo >= 0 && itemInRepo < customRepo.Count)
+			return customRepo[itemInRepo];
 		throw new IndexOutOfRangeException("Item index is out of range.");
 	}
 }
